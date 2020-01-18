@@ -27,6 +27,7 @@ class PostTransformer extends TransformerAbstract
             /* place your other model properties here */
             'title' => $model->title,
             'body' => $this->getBody($model->body),
+            'image' => url('storage/' . $model->image),
             'created_at' => $model->created_at->format('Y/m/d H:i')
         ];
     }
